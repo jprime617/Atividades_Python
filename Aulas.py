@@ -132,4 +132,64 @@ def pograma():
 # data_hoje()
 # data_hoje2()
 # revisao()
-pograma()
+# pograma()
+
+# 09/04/2025 
+
+def lacos():
+    nome = input("digite um nome: ")
+    while nome:
+        input("insira um nome: ")
+
+    NUM = 1
+    while (3 >= NUM):
+        print(NUM)
+        NUM += 1
+
+def lacos2():
+    tabuada = int(input("Digite um numero para tabuada: "))
+    n = 1
+    while (n <= 10):
+        print(n * tabuada)
+        n += 1
+
+def lacos3():
+    tabuada = 1
+
+    while tabuada <= 10:
+        numero = 1
+        while numero <= 10:
+            print("%d X %d= %d"%(tabuada, numero, tabuada * numero))
+            numero += 1
+        print("====================")
+        tabuada += 1
+
+def lacos4():
+    h = 1
+
+    while h <= 12:
+        m = 1
+        while m <= 59:
+            print(f"são {h} horas e {m} minutos")
+            m += 1
+        h += 1
+
+def lacos5():
+    import random
+
+    numero_aleatorio = random.randint(1, 100)
+    tentativa = int(input("Adivinhe o numero entre 1 e 100: "))
+
+    while tentativa != numero_aleatorio:
+        if tentativa < numero_aleatorio:
+            print("muito baixo!")
+        else:
+            print("muito alto!")
+        tentativa = int(input("Tente novamente: "))
+
+    print(f"Parabens vc adivinhou o numero { numero_aleatorio}.")
+
+# lacos()
+# lacos2()
+# lacos4()
+lacos5()
