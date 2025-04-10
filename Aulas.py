@@ -192,4 +192,72 @@ def lacos5():
 # lacos()
 # lacos2()
 # lacos4()
-lacos5()
+# lacos5()
+
+# 10/04/2025 laços part2 && Listas
+
+def Roi():
+    soma_roi = 0
+
+    while True:
+        receita = float(input("Qual a sua receita: "))
+        custo = float(input("Qual o custo: "))
+        ROI = ((receita - custo) / custo) * 100
+        soma_roi += ROI
+
+        print(f"Seu ROI é: {ROI:.2f}")
+
+        if input("vc quer Continuar a calcular o Roi? (s/n): ").upper() == "N":
+            print(f"A soma dos Roi é: {soma_roi}")
+            break
+            
+def lista():
+    lista = [-12,50,25,0,45,9]
+    print(type(lista))
+    
+def lista2():
+
+    cidades = []
+
+    while len(cidades) <= 2:
+        cidades.append(input("Digite o nome da cidade: "))
+    print(f"{cidades}")
+
+def lista3():
+    cidades = []
+    estados = []
+
+    tamanho_lista = int(input("Digite o tamanho da lista: "))
+
+    for elemento in range(tamanho_lista):
+        cidades.append(input("Digite o nome da cidade: "))
+        estados.append(input("Digite o nome do estado: "))
+    print(f"As cidades digitadas foram: {cidades}")
+    print(f"Os estados digitados foram: {estados}")
+
+def lista4():
+    unidade = ["Newton", "Joule", "Kelvin", "Pascal"]
+    print(unidade)
+    print("No indice =3 temos: ", unidade[-1])
+    print("No indice =2 temos: ", unidade[-2])
+    print("No indice =1 temos: ", unidade[-3])
+    print("No indice =0 temos: ", unidade[-4])
+
+def lista5():
+    unidade = ["Newton", "Joule", "Kelvin", "Pascal"]
+    print(unidade)
+    x = len(unidade)
+    for i, elemento in enumerate(unidade):
+        print("No indice = ", (x - 1), "temos: ", unidade[x - 1])
+        x -= 1
+
+
+
+
+
+
+# Roi()
+# lista()
+# lista2()
+# lista3()
+lista4()
