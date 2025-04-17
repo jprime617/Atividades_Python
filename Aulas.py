@@ -251,13 +251,27 @@ def lista5():
         print("No indice = ", (x - 1), "temos: ", unidade[x - 1])
         x -= 1
 
-
-
-
-
-
 # Roi()
 # lista()
 # lista2()
 # lista3()
-lista4()
+# lista4()
+
+# 17/04/2025 
+
+def lista6():
+    livros = ["Java", "SqlServer", "Delphi", "Python"]
+    livros.append("Android")
+    livros.insert(0, "Oracle")
+    print(livros)
+    livros.pop(5)
+    print(livros)
+    livros.remove("Delphi")
+    print(livros)
+    livros.sort()
+    print(livros)
+    livros.reverse()
+    print(livros)
+
+lista6()
+
