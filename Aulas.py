@@ -273,5 +273,14 @@ def lista6():
     livros.reverse()
     print(livros)
 
+def lista7():
+    lista = []
+    for x in range(5):
+        n = int(input("Digite um numero: "))
+        lista.append(n)
+        lista.sort()
+    print(lista)
+
 lista6()
+lista7()
 
