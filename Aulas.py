@@ -281,6 +281,102 @@ def lista7():
         lista.sort()
     print(lista)
 
-lista6()
-lista7()
+# lista6()
+# lista7()
+
+# 23/04/2025 
+
+# def algoritmo():
+#     lista = [15,7,27,39]
+
+#     achou = False
+#     rep = True
+
+#     while rep:
+#         procurado = int(input("Digite o numero a ser procurado: "))
+
+#         for i in range(len(lista)):
+#             if lista[i] == procurado:
+#                 achou = True
+
+#             if achou:
+#                 print(f"O numero {procurado} foi encontrado na posição {i + 1}")
+#                 i = 0
+#                 break
+#             else:
+#                 print(f"O numero {procurado} não foi encontrado")
+#                 i = 0
+#                 break
+        
+#         achou = False
+        
+#         res = input("Quer continuar? (s/n): ").lower()
+#         if res == "n":
+#             rep = False
+
+def algoritmo2():
+    lista = [15,7,27,39]
+    procurado = int(input("Digite o numero a ser procurado: "))
+
+    achou = False
+    x = 0
+
+    while x < len(lista):
+        if lista[x] == procurado:
+            achou = True
+            break
+        x += 1
+    if achou:
+        print(f"O numero {procurado} foi encontrado na posição {x + 1}")
+    else:
+        print(f"O numero {procurado} não foi encontrado")
+
+def lista8():
+    lista = [1,7,2,4,0]
+    maximo = lista[0]
+    minimo = lista[0]
+
+    for i in lista:
+        if i > maximo:
+            maximo = i
+        if i < minimo:
+            minimo = i
+    print(f"maximo: {maximo}, minimo: {minimo}")
+
+def lista9():
+    valores = [9,8,7,12,0,13,21]
+    pares = []
+    impares = []
+
+    for i in valores:
+        if i % 2 == 0:
+            pares.append(i)
+        else:
+            impares.append(i)
+
+    print(f"Pares: {pares}")
+    print(f"Impares: {impares}")
+
+def lista10():
+    lista = [1, 4,5,6,4,7]
+
+    valor = 4
+    remove = False
+    temp = []
+
+    for i in range(len(lista)):
+        if lista[i] != valor or remove:
+            temp.append(lista[i])
+        else:
+            remove = True
+
+    lista = temp
+
+    print(lista)
+
+# algoritmo() # BRUH
+# algoritmo2()
+# lista8()
+# lista9()
+# lista10()
 
