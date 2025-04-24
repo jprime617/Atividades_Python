@@ -380,3 +380,65 @@ def lista10():
 # lista9()
 # lista10()
 
+# 24/04/2025 Try except
+
+def tex1():
+    x = 12
+    y = 0
+    try:
+        z = x/y
+    except ZeroDivisionError:
+        print("Erro: Dividsite por zero, meu kiridu!!!!!")
+
+def ler_int(mensagem, mensagem_erro):
+    while True:
+        try:
+            entrada = int(input(mensagem))
+            return entrada
+        except ValueError:
+            print(mensagem_erro)
+
+def div():
+    print("Vamos dividir dois numeros inseridos por voce\n")
+    num1 = input("Insira o primeiro numero: ")
+    num2 = input("Insira o segundo numero: ")
+    try:
+        resultado = int(num1) / int(num2)
+        print("O resultado é " + str(resultado))
+    except ZeroDivisionError:
+        print("Deu erro Zero Div")
+    except ValueError:
+        print("Deu erro Value Error")
+    except Exception:
+        print("Deu Erro GERAL")
+
+def tex2():
+    try:
+        idade = int(input("Digite sua idade: "))
+        if idade <= 0 or idade >= 110:
+            raise ValueError("A idade deve ser um numero positivo.")
+    except ValueError as erro:
+        raise ValueError(f"Erro de entrada: {erro}")
+
+# Programa do Carro
+
+
+
+
+
+
+
+
+
+
+
+# tex1()
+# MSG = "Digite um numero inteiro: "
+# MSG_ERRO = "Numero invalido!!!"
+# x = ler_int(MSG, MSG_ERRO)
+# y = ler_int(MSG, MSG_ERRO)
+# print(x+y)
+# div()
+# tex2()
+
+
