@@ -122,7 +122,7 @@ def atv04():
             print("voce escreveu errado")
             
 
-
+# Nao consegui fazer o resto 😢
 
 
 # atv01()
