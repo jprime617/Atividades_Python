@@ -125,7 +125,7 @@ def atv04():
 # Nao consegui fazer o resto 😢
 
 
-# atv01()
+atv01()
 # atv02()
 # atv03()
 # atv04()

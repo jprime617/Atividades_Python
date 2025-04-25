@@ -27,7 +27,7 @@ while True:
     try:
         qcarro = input(Fore.YELLOW + "Digite o indice do carro que deseja reservar ou FIM para encerrar: ")
         
-        if int(qcarro) > len(carros) or int(qcarro) < 0:
+        if int(qcarro) > len(carros) -1 or int(qcarro) < 0:
             print(Fore.RED + "Numero Invalido")
         else:    
             reserva()
