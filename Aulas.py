@@ -382,54 +382,43 @@ def lista10():
 
 # 24/04/2025 Try except
 
-def tex1():
-    x = 12
-    y = 0
-    try:
-        z = x/y
-    except ZeroDivisionError:
-        print("Erro: Dividsite por zero, meu kiridu!!!!!")
+# def tex1():
+#     x = 12
+#     y = 0
+#     try:
+#         z = x/y
+#     except ZeroDivisionError:
+#         print("Erro: Dividsite por zero, meu kiridu!!!!!")
 
-def ler_int(mensagem, mensagem_erro):
-    while True:
-        try:
-            entrada = int(input(mensagem))
-            return entrada
-        except ValueError:
-            print(mensagem_erro)
+# def ler_int(mensagem, mensagem_erro):
+#     while True:
+#         try:
+#             entrada = int(input(mensagem))
+#             return entrada
+#         except ValueError:
+#             print(mensagem_erro)
 
-def div():
-    print("Vamos dividir dois numeros inseridos por voce\n")
-    num1 = input("Insira o primeiro numero: ")
-    num2 = input("Insira o segundo numero: ")
-    try:
-        resultado = int(num1) / int(num2)
-        print("O resultado é " + str(resultado))
-    except ZeroDivisionError:
-        print("Deu erro Zero Div")
-    except ValueError:
-        print("Deu erro Value Error")
-    except Exception:
-        print("Deu Erro GERAL")
+# def div():
+#     print("Vamos dividir dois numeros inseridos por voce\n")
+#     num1 = input("Insira o primeiro numero: ")
+#     num2 = input("Insira o segundo numero: ")
+#     try:
+#         resultado = int(num1) / int(num2)
+#         print("O resultado é " + str(resultado))
+#     except ZeroDivisionError:
+#         print("Deu erro Zero Div")
+#     except ValueError:
+#         print("Deu erro Value Error")
+#     except Exception:
+#         print("Deu Erro GERAL")
 
-def tex2():
-    try:
-        idade = int(input("Digite sua idade: "))
-        if idade <= 0 or idade >= 110:
-            raise ValueError("A idade deve ser um numero positivo.")
-    except ValueError as erro:
-        raise ValueError(f"Erro de entrada: {erro}")
-
-# Programa do Carro
-
-
-
-
-
-
-
-
-
+# def tex2():
+#     try:
+#         idade = int(input("Digite sua idade: "))
+#         if idade <= 0 or idade >= 110:
+#             raise ValueError("A idade deve ser um numero positivo.")
+#     except ValueError as erro:
+#         raise ValueError(f"Erro de entrada: {erro}")
 
 
 # tex1()
@@ -442,3 +431,96 @@ def tex2():
 # tex2()
 
 
+# 30/04/2025 funções def
+
+# def soma(a,b):
+#     print(a + b)
+
+# soma(2,9)
+# soma(45,45)
+
+# valor_A = int(input("Digite um valor A: "))
+# valor_B = int(input("Digite um valor B: "))
+
+# soma(valor_A, valor_B)
+
+# import random
+
+# def criaListaAleatoria(tamanho) :
+#     lista = []
+#     for i in range(tamanho):
+#         valor = random.randint(1,10)
+#         lista.append(valor)
+#     return lista, max(lista), min(lista)
+
+# tam = 5
+
+# li, maxli, minli = criaListaAleatoria(tam)
+
+# print(li)
+# print(maxli)
+# print(minli)
+
+
+# def somar(a,b,c):
+#     soma = a + b + c
+#     return soma
+
+# num1 = int(input("Digite o numero 1: "))
+# num2 = int(input("Digite o numero 2: "))
+# num3 = int(input("Digite o numero 3: "))
+
+# print(f"A Soma dos numeros é: {somar(num1,num2,num3)}")
+
+
+
+# funcoes part 2
+
+lista = ["Retangulo", "Triagulo", "Circulo"]
+lista_Funcoes = [area_Retangulo(), area_Triangulo()]
+
+
+def area_Retangulo(lado_a,lado_b):
+    area = lado_a * lado_b
+    return area
+
+def area_Triangulo(base, altura):
+    area = (base * altura) / 2
+    return area
+
+def area_Circulo(raio):
+    area = 3.14 * (raio ** 2)
+    return area
+
+
+def Menu(items_Menu, questao):
+
+    contador = 1
+    print(questao)
+    for i in items_Menu:
+        print(f"{contador} - {i}")
+        contador += 1
+    print("0 - Fim")
+
+    for i in range(len(items_Menu)):
+
+        print(i)
+
+        match selection:
+            case i:
+
+
+
+    selection = int(input("Digite: "))
+
+    if selection == 1:
+        print(area_Retangulo(int(input("Digite a base: ")), int(input("Digite a altura: "))))
+    elif selection == 2:
+        print(area_Triangulo(int(input("Digite a base: ")), int(input("Digite a altura: "))))
+    elif selection == 3:
+        print(area_Circulo(int(input("Digite o raio: "))))
+    elif selection == 0:
+        print("FIM")
+        return
+
+Menu(lista, "Escolha o objeto que deseja calcular a area:")
