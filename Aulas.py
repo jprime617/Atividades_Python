@@ -476,51 +476,101 @@ def lista10():
 
 # funcoes part 2
 
-lista = ["Retangulo", "Triagulo", "Circulo"]
-lista_Funcoes = [area_Retangulo(), area_Triangulo()]
+# lista = ["Retangulo", "Triagulo", "Circulo"]
+# lista_Funcoes = [area_Retangulo(), area_Triangulo()]
 
 
-def area_Retangulo(lado_a,lado_b):
-    area = lado_a * lado_b
-    return area
+# def area_Retangulo(lado_a,lado_b):
+#     area = lado_a * lado_b
+#     return area
 
-def area_Triangulo(base, altura):
-    area = (base * altura) / 2
-    return area
+# def area_Triangulo(base, altura):
+#     area = (base * altura) / 2
+#     return area
 
-def area_Circulo(raio):
-    area = 3.14 * (raio ** 2)
-    return area
-
-
-def Menu(items_Menu, questao):
-
-    contador = 1
-    print(questao)
-    for i in items_Menu:
-        print(f"{contador} - {i}")
-        contador += 1
-    print("0 - Fim")
-
-    for i in range(len(items_Menu)):
-
-        print(i)
-
-        match selection:
-            case i:
+# def area_Circulo(raio):
+#     area = 3.14 * (raio ** 2)
+#     return area
 
 
+# def Menu(items_Menu, questao):
 
-    selection = int(input("Digite: "))
+#     contador = 1
+#     print(questao)
+#     for i in items_Menu:
+#         print(f"{contador} - {i}")
+#         contador += 1
+#     print("0 - Fim")
 
-    if selection == 1:
-        print(area_Retangulo(int(input("Digite a base: ")), int(input("Digite a altura: "))))
-    elif selection == 2:
-        print(area_Triangulo(int(input("Digite a base: ")), int(input("Digite a altura: "))))
-    elif selection == 3:
-        print(area_Circulo(int(input("Digite o raio: "))))
-    elif selection == 0:
-        print("FIM")
+#     for i in range(len(items_Menu)):
+
+#         print(i)
+
+#         match selection:
+#             case i:
+
+
+
+#     selection = int(input("Digite: "))
+
+#     if selection == 1:
+#         print(area_Retangulo(int(input("Digite a base: ")), int(input("Digite a altura: "))))
+#     elif selection == 2:
+#         print(area_Triangulo(int(input("Digite a base: ")), int(input("Digite a altura: "))))
+#     elif selection == 3:
+#         print(area_Circulo(int(input("Digite o raio: "))))
+#     elif selection == 0:
+#         print("FIM")
+#         return
+
+# Menu(lista, "Escolha o objeto que deseja calcular a area:")
+
+
+# 07/05/2025
+
+lista_alunos = []
+lista_notas = []
+
+def alunos():
+
+    while True:
+        aluno = str(input("Digite o nome do aluno ou FIM para sair: "))
+        if aluno.lower() == "fim":
+            break
+        else:
+            if aluno == "":
+                print("Digite algo na caixa bobao!")
+            else:
+                nota = float(input("Digite a nota do aluno: "))
+                lista_alunos.append(aluno.lower())
+                lista_notas.append(nota)
+
+    if lista_alunos:
+
+        media = sum(lista_notas) / len(lista_alunos)
+        print(media)
+
+
+        for i in range(len(lista_alunos)):  
+            if lista_notas[i] > media:
+                print(f"Aluno {lista_alunos[i]} foi acima da media")
+    else:
         return
+        
+# alunos()
 
-Menu(lista, "Escolha o objeto que deseja calcular a area:")
+def alunos_prof():
+    Alunos_Idade = []
+
+    for i in range(5):
+        linha = []
+        linha.append(input("Digite o nome do aluno " + str(i) + ":"))
+        print(linha)
+        linha.append(int(input("Digite a idade do aluno " + linha[0] + ":")))
+        print(linha)
+        Alunos_Idade.append(linha)
+
+# alunos_prof()
+
+a = (3, "maio", 9.5, 1)
+print(a[1:3])
