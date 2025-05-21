@@ -602,22 +602,36 @@
 # for item in enumerate(zip(vendas, funcionarios)):
 #     print(item)
 
-faturamento = 0
+# faturamento = 0
 
-vendas = [
-    ("20/08/2020", "Iphone X", "Azul", "128GB", 1, 4000),
-    ("20/08/2020", "Iphone X", "Prata", "128GB", 1, 4000),
-    ("20/08/2020", "Ipad", "Prata", "256GB", 1, 6000),
-    ("20/08/2020", "Ipad", "Prata", "128GB", 1, 5000),
-    ("21/08/2020", "Iphone X", "Azul", "128GB", 1, 4000),
-    ("21/08/2020", "Iphone X", "Prata", "128GB", 1, 4000),
-    ("21/08/2020", "Ipad", "Prata", "256GB", 1, 6000),
-    ("21/08/2020", "Ipad", "Prata", "128GB", 1, 5000),
-]
+# vendas = [
+#     ("20/08/2020", "Iphone X", "Azul", "128GB", 1, 4000),
+#     ("20/08/2020", "Iphone X", "Prata", "128GB", 1, 4000),
+#     ("20/08/2020", "Ipad", "Prata", "256GB", 1, 6000),
+#     ("20/08/2020", "Ipad", "Prata", "128GB", 1, 5000),
+#     ("21/08/2020", "Iphone X", "Azul", "128GB", 1, 4000),
+#     ("21/08/2020", "Iphone X", "Prata", "128GB", 1, 4000),
+#     ("21/08/2020", "Ipad", "Prata", "256GB", 1, 6000),
+#     ("21/08/2020", "Ipad", "Prata", "128GB", 1, 5000),
+# ]
 
-for item in vendas:
-    data, nome, cor, giga, unidades_vendidas, preco = item
-    if (nome == "Iphone X") and (data == "20/08/2020", "21/08/2020"):
-        faturamento += preco * unidades_vendidas
+# for item in vendas:
+#     data, nome, cor, giga, unidades_vendidas, preco = item
+#     if (nome == "Iphone X") and (data == "20/08/2020", "21/08/2020"):
+#         faturamento += preco * unidades_vendidas
 
-print(f"R$:{faturamento:,.2f}")
+# print(f"R$:{faturamento:,.2f}")
+
+# lucro_1tri = {"janeiro": 100000, "favereiro": 120000, "março": 90000}
+# lucro_2tri = {"abril": 88000, "maio": 89000, "junho": 120000}
+
+# del lucro_2tri["junho"]
+# print(lucro_2tri)
+
+# lucro_jun = lucro_2tri.pop("maio")
+# print(lucro_2tri)
+# print(lucro_jun)
+
+# lucro_2tri.clear()
+# print(lucro_2tri)
+

@@ -1,0 +1,16 @@
+1 - https://www.kaggle.com/datasets/gregorut/videogamesales
+
+2 - https://www.kaggle.com/datasets/melissamonfared/video-game-console-generations
+
+3 - https://www.kaggle.com/datasets/darrylljk/magic-the-gathering-card-ratings-otj
+
+4 - https://www.kaggle.com/datasets/rounakbanik/pokemon
+
+5 - https://www.kaggle.com/datasets/CooperUnion/anime-recommendations-database
+
+
+
+
+
+
+https://home.web.cern.ch/science/computing/birth-web
