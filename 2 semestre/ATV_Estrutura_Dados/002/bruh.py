@@ -70,107 +70,66 @@ for i in range(len(Pilha2)):
 
 def Batalha():
     competidores = []
+    acabou = False
     while Fila or Fila2:
-        competidores.append(Fila.pop(0))
-        competidores.append(Fila2.pop(0))
+        carta1 = Fila.pop(0)
+        carta2 = Fila2.pop(0)
+        acabou = False
 
-        if competidores[0].Spd > competidores[1].Spd:
-            if competidores[1].Def - competidores[0].Atk < 1:
-                print("===========================O Jogador Venceu===========================")
-                print(f"JOGADOR: {competidores[0].Name}")
-                print(f"ATK: {competidores[0].Atk}")
-                print(f"DEF: {competidores[0].Def}")
-                print(f"VEL: {competidores[0].Spd}")
-                print("----------------------------------------------------------------------")
-                print(f"ENEMY: {competidores[1].Name}")
-                print(f"ATK: {competidores[1].Atk}")
-                print(f"DEF: {competidores[1].Def}")
-                print(f"VEL: {competidores[1].Spd}")
-                print("///////////////////////////////////////////////////////////////////////")
-                competidores = []
+        while acabou == False:
+
+            if carta1.Spd > carta2.Spd:
+                if carta2.Def - carta1.Atk < 1:
+                    print("===========================O Jogador Venceu===========================")
+                    print(f"JOGADOR: {carta1.Name}")
+                    print(f"ATK: {carta1.Atk}")
+                    print(f"DEF: {carta1.Def}")
+                    print(f"VEL: {carta1.Spd}")
+                    print("----------------------------------------------------------------------")
+                    print(f"ENEMY: {carta2.Name}")
+                    print(f"ATK: {carta2.Atk}")
+                    print(f"DEF: {carta2.Def}")
+                    print(f"VEL: {carta2.Spd}")
+                    print("///////////////////////////////////////////////////////////////////////")
+                    acabou == True
+                else:
+                    carta1.Spd = 0
+                    
             else:
-                if competidores[0].Def - competidores[1].Atk < 1:
-                    print("===========================O Enemy Venceu===========================")
-                    print(f"JOGADOR: {competidores[0].Name}")
-                    print(f"ATK: {competidores[0].Atk}")
-                    print(f"DEF: {competidores[0].Def}")
-                    print(f"VEL: {competidores[0].Spd}")
-                    print("----------------------------------------------------------------------")
-                    print(f"ENEMY: {competidores[1].Name}")
-                    print(f"ATK: {competidores[1].Atk}")
-                    print(f"DEF: {competidores[1].Def}")
-                    print(f"VEL: {competidores[1].Spd}")
-                    print("///////////////////////////////////////////////////////////////////////")
-                    competidores = []
-                else:
-                    print("===========================Empatou / Jogador===========================")
-                    print(f"JOGADOR: {competidores[0].Name}")
-                    print(f"ATK: {competidores[0].Atk}")
-                    print(f"DEF: {competidores[0].Def}")
-                    print(f"VEL: {competidores[0].Spd}")
-                    print("----------------------------------------------------------------------")
-                    print(f"ENEMY: {competidores[1].Name}")
-                    print(f"ATK: {competidores[1].Atk}")
-                    print(f"DEF: {competidores[1].Def}")
-                    print(f"VEL: {competidores[1].Spd}")
-                    print("///////////////////////////////////////////////////////////////////////")
-                    competidores[0].Spd = 0
-        else:
-            if competidores[1].Spd > competidores[0].Spd:
-                if competidores[0].Def - competidores[1].Atk < 1:
-                    print("===========================O Enemy Venceu===========================")
-                    print(f"JOGADOR: {competidores[0].Name}")
-                    print(f"ATK: {competidores[0].Atk}")
-                    print(f"DEF: {competidores[0].Def}")
-                    print(f"VEL: {competidores[0].Spd}")
-                    print("----------------------------------------------------------------------")
-                    print(f"ENEMY: {competidores[1].Name}")
-                    print(f"ATK: {competidores[1].Atk}")
-                    print(f"DEF: {competidores[1].Def}")
-                    print(f"VEL: {competidores[1].Spd}")
-                    print("///////////////////////////////////////////////////////////////////////")
-                    competidores = []
-                else:
-                    if competidores[1].Def - competidores[0].Atk < 1:
-                        print("===========================O Jogador Venceu===========================")
-                        print(f"JOGADOR: {competidores[0].Name}")
-                        print(f"ATK: {competidores[0].Atk}")
-                        print(f"DEF: {competidores[0].Def}")
-                        print(f"VEL: {competidores[0].Spd}")
+                if carta2.Spd > carta1.Spd:
+                    if carta1.Def - carta2.Atk < 1:
+                        print("===========================O Enemy Venceu===========================")
+                        print(f"JOGADOR: {carta1.Name}")
+                        print(f"ATK: {carta1.Atk}")
+                        print(f"DEF: {carta1.Def}")
+                        print(f"VEL: {carta1.Spd}")
                         print("----------------------------------------------------------------------")
-                        print(f"ENEMY: {competidores[1].Name}")
-                        print(f"ATK: {competidores[1].Atk}")
-                        print(f"DEF: {competidores[1].Def}")
-                        print(f"VEL: {competidores[1].Spd}")
+                        print(f"ENEMY: {carta2.Name}")
+                        print(f"ATK: {carta2.Atk}")
+                        print(f"DEF: {carta2.Def}")
+                        print(f"VEL: {carta2.Spd}")
                         print("///////////////////////////////////////////////////////////////////////")
                         competidores = []
+                        acabou = True
                     else:
-                        print("===========================Empatou / Enemy===========================")
-                        print(f"JOGADOR: {competidores[0].Name}")
-                        print(f"ATK: {competidores[0].Atk}")
-                        print(f"DEF: {competidores[0].Def}")
-                        print(f"VEL: {competidores[0].Spd}")
+                        carta2.Spd = 0
+                        
+                else: 
+                    if carta1.Spd == 0 and carta2.Spd == 0:
+                        print("===========================Empatou Total mesmo===========================")
+                        print(f"JOGADOR: {carta1.Name}")
+                        print(f"ATK: {carta1.Atk}")
+                        print(f"DEF: {carta1.Def}")
+                        print(f"VEL: {carta1.Spd}")
                         print("----------------------------------------------------------------------")
-                        print(f"ENEMY: {competidores[1].Name}")
-                        print(f"ATK: {competidores[1].Atk}")
-                        print(f"DEF: {competidores[1].Def}")
-                        print(f"VEL: {competidores[1].Spd}")
+                        print(f"ENEMY: {carta2.Name}")
+                        print(f"ATK: {carta2.Atk}")
+                        print(f"DEF: {carta2.Def}")
+                        print(f"VEL: {carta2.Spd}")
                         print("///////////////////////////////////////////////////////////////////////")
-                        competidores[1].Spd = 0
-            else: 
-                if competidores[0].Spd == 0 and competidores[1].Spd == 0:
-                    print("===========================Empatou Total mesmo===========================")
-                    print(f"JOGADOR: {competidores[0].Name}")
-                    print(f"ATK: {competidores[0].Atk}")
-                    print(f"DEF: {competidores[0].Def}")
-                    print(f"VEL: {competidores[0].Spd}")
-                    print("----------------------------------------------------------------------")
-                    print(f"ENEMY: {competidores[1].Name}")
-                    print(f"ATK: {competidores[1].Atk}")
-                    print(f"DEF: {competidores[1].Def}")
-                    print(f"VEL: {competidores[1].Spd}")
-                    print("///////////////////////////////////////////////////////////////////////")
-                    competidores = []
+                        competidores = []
+                        acabou = True
+                        
 
 
 
