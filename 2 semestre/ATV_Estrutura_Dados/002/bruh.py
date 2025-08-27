@@ -44,13 +44,30 @@ for i in Gundam_lista:
 Fila = []
 Fila2 = []
 
+def Ordenar(X):
+    for i in X:
+        n = 0
+        if i.Spd > n:
+            carta = X.pop(i)
+            X.append(carta)
+        n = i
+
 
 def Adicionar():
     while len(Fila) < 5 and Pilha:
         Fila.append(Pilha.pop(-1))
+        
 
     while len(Fila2) < 5 and Pilha2:
         Fila2.append(Pilha2.pop(-1))
+        
+    
+    # Fila.sort(key=lambda x: x.Spd, reverse=True)
+    # Fila2.sort(key=lambda x: x.Spd, reverse=True)
+    Ordenar(Fila)
+
+    for i in Fila:
+        print(i.Spd)
 
 
 
