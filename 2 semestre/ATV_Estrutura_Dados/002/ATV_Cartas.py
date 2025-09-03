@@ -27,6 +27,20 @@ Gundam_lista = [
     "Miguel’s Ginn",
 ]
 
+lista = ["1, 1, 1",
+         "2, 2, 2",
+         "3, 3, 3",
+         "4, 4, 4",
+         "5, 5, 5",
+         "6, 6, 6",
+         "7, 7, 7",
+         "8, 8, 8",
+         "9, 9, 9",
+         "10, 10, 10",]
+
+
+
+
 class Carta:
     def __init__(self, name):
         self.Name = name
@@ -64,10 +78,10 @@ def Adicionar():
     
     # Fila.sort(key=lambda x: x.Spd, reverse=True)
     # Fila2.sort(key=lambda x: x.Spd, reverse=True)
-    Ordenar(Fila)
+    # Ordenar(Fila)
 
-    for i in Fila:
-        print(i.Spd)
+    # for i in Fila:
+    #     print(i.Spd)
 
 
 
@@ -108,7 +122,6 @@ def Batalha():
 
         
         print("//////////////////////////////////////////////////")
-
 
 Adicionar()
 Batalha()
